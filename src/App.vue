@@ -1,21 +1,42 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import { reactive } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
+import { reactive, ref } from 'vue'
+
+// 创建路由对象
+const router = useRouter()
+const route = useRoute()
+
+// 导航路由
+interface navItem {
+  index: number,
+  name: string,
+  path: string
+}
 
 const navList = reactive(
   [
-    { index: 0, name: '首页' },
-    { index: 1, name: '技术' },
-    { index: 3, name: '关于' }
+    { index: 0, name: '首页', path: '/' },
+    { index: 1, name: '技术', path: '/tech' },
+    { index: 3, name: '关于', path: '/about' }
   ]
 )
+
+let selectedIndex = 0
+
+function NavigateToPage(item:navItem ,index:number) {
+  selectedIndex = index
+  const urlPath = item.path
+  router.push({
+    path: urlPath
+  });
+}
 
 </script>
 
 <template>
   <div class="header">
     <div class="nav">
-      <div v-for="(item, index) in navList" :key="index" class="nav-item">{{ item.name }}</div>
+      <a v-for="(item, index) in navList" :key="index" :class="selectedIndex === index ? 'active':'' " class="nav-item" @click="NavigateToPage(item,index)">{{ item.name }}</a>
     </div>
   </div>
   <RouterView />
@@ -25,7 +46,7 @@ const navList = reactive(
 .header {
   height: 52px;
   width: 100%;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(112, 22, 56, 1);
 }
 .nav {
   height: 100%;
@@ -33,7 +54,16 @@ const navList = reactive(
   align-items: center;
 }
 .nav-item {
-  padding: 6px 20px;
+  height: 100%;
+  padding: 0px 30px;
+  display: flex;
+  align-items: center;
   cursor: pointer;
+}
+.nav-item:hover {
+  background: rgba(161, 0, 63, 1);
+}
+.nav-item:active {
+  background: rgba(240, 40, 11, 1);
 }
 </style>
