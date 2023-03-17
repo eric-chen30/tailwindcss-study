@@ -34,7 +34,7 @@ function NavigateToPage(item:navItem ,index:number) {
 </script>
 
 <template>
-  <div class="header">
+  <div class="h-14 bg-gradient-to-r from-purple-500 to-pink-500">
     <div class="nav">
       <a v-for="(item, index) in navList" :key="index" :class="selectedIndex === index ? 'active':'' " class="nav-item" @click="NavigateToPage(item,index)">{{ item.name }}</a>
     </div>
@@ -43,11 +43,6 @@ function NavigateToPage(item:navItem ,index:number) {
 </template>
 
 <style scoped>
-.header {
-  height: 52px;
-  width: 100%;
-  background: rgba(112, 22, 56, 1);
-}
 .nav {
   height: 100%;
   display: flex;
@@ -61,7 +56,7 @@ function NavigateToPage(item:navItem ,index:number) {
   cursor: pointer;
 }
 .nav-item:hover {
-  background: rgba(161, 0, 63, 1);
+  background: rgba(33, 67, 79, 1);
 }
 .nav-item:active {
   background: rgba(240, 40, 11, 1);

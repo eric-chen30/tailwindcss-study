@@ -621,11 +621,6 @@
         <pre data-prefix=">" class="text-success"><code>Done!</code></pre>
       </div>
     </div>
-    <div class="flex flex-1 items-center my-2">
-      <div class="mockup-window border w-full h-80 bg-base-300">
-        <div class="flex justify-center px-4 py-16 bg-base-200">Hello!</div>
-      </div>
-    </div>
     <div class="flex flex-1 justify-center items-center my-2">
       <div class="mockup-phone border-primary">
         <div class="camera"></div> 
@@ -635,16 +630,9 @@
         </div>
       </div>
     </div>
-  </div>
-  <!-- Line 8 -->
-  <div class="out-flex-box">
-    <div class="flex flex-1 m-2">
-      <div class="mockup-phone border-primary">
-        <div class="camera"></div> 
-        <div class="display">
-          <img class="mask mask-squircle w-80 h-80" src="../../assets/images/avatar.jpg" />
-          <img class="mask mask-decagon w-80 h-80" src="../../assets/images/avatar.jpg" />
-        </div>
+    <div class="flex flex-1 items-center my-2">
+      <div class="mockup-window border w-full h-80 bg-base-300">
+        <div class="flex justify-center px-4 py-16 bg-base-200">Hello!</div>
       </div>
     </div>
   </div>
