@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Navigation/Home.vue'
-import Tech from '../views/Navigation/Tech.vue'
+import Pinia from '../views/Navigation/Pinia.vue'
 import About from '../views/Navigation/About.vue'
 
 const router = createRouter({
@@ -12,9 +12,9 @@ const router = createRouter({
       component: Home
     },
     {
-      name: 'Tech',
-      path: '/tech',
-      component: Tech
+      name: 'Pinia',
+      path: '/pinia',
+      component: Pinia
     },
     {
       name: 'About',

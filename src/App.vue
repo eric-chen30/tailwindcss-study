@@ -16,7 +16,7 @@ interface navItem {
 const navList = reactive(
   [
     { index: 0, name: 'TailWindCSS + daisyui', path: '/' },
-    { index: 1, name: '技术', path: '/tech' },
+    { index: 1, name: 'Pinia', path: '/pinia' },
     { index: 3, name: '关于', path: '/about' }
   ]
 )
