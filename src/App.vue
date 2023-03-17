@@ -15,7 +15,7 @@ interface navItem {
 
 const navList = reactive(
   [
-    { index: 0, name: '首页', path: '/' },
+    { index: 0, name: 'TailWindCSS + daisyui', path: '/' },
     { index: 1, name: '技术', path: '/tech' },
     { index: 3, name: '关于', path: '/about' }
   ]
@@ -54,9 +54,11 @@ function NavigateToPage(item:navItem ,index:number) {
   display: flex;
   align-items: center;
   cursor: pointer;
+  font-weight: bold;
+  color: rgba(40, 66, 77, 1);
 }
 .nav-item:hover {
-  background: rgba(33, 67, 79, 1);
+  background: rgb(175, 32, 153);
 }
 .nav-item:active {
   background: rgba(240, 40, 11, 1);
