@@ -51,7 +51,7 @@
 
 <script setup lang="ts">
 // 引入Store
-import { useCounterStore, useTodos } from '@/stores/counter'
+import { useCounterStore, useTodos } from '../../stores/counter'
 import { storeToRefs } from 'pinia';
 
 // 1.store实例化对象接收返回
