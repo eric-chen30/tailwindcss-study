@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "vite --host localhost --port 7777 --open --strictPort",
+    "dev": "vite --host localhost --port 8083 --open --strictPort",
     "build": "run-p type-check build-only",
     "preview": "vite preview",
     "test:unit": "vitest",
